@@ -1,0 +1,12 @@
+{% extends "HighlandWanderer/base.html" %}
+{% block title %}Add Location{% endblock %}
+{% block body %}
+<div class="container mt-5">
+    <h1>Add Location</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Add Location</button>
+    </form>
+</div>
+{% endblock %}

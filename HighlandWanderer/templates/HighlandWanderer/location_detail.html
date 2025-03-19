@@ -1,0 +1,79 @@
+{% extends "HighlandWanderer/base.html" %}
+{% load static %}
+{% block title %}{{ location.name }} Details{% endblock %}
+
+{% block body %}
+<div class="container location-detail-container mt-5">
+  <!-- Location Title -->
+  <h1 class="location-title">{{ location.name }}</h1>
+
+  <!-- Address part -->
+  <p class="location-address">
+    📍 <strong>Address:</strong>
+    <a href="https://www.google.com/maps/search/{{ location.address|urlencode }}" target="_blank">
+      {{ location.address }}
+    </a>
+  </p>
+
+  <!-- Rating section -->
+  <div class="rating-container">
+    <span class="rating-item">🌟 Beautiful: <strong>{{ location.beautiful }}/5</strong></span>
+    <span class="rating-item">🛏️ Comfortable: <strong>{{ location.comfortable }}/5</strong></span>
+    <span class="rating-item">🚗 Traffic: <strong>{{ location.traffic }}/5</strong></span>
+  </div>
+
+  <!-- Description -->
+  <div class="location-description">
+    <p>{{ location.description }}</p>
+  </div>
+
+  <!-- Location Picture -->
+  <div class="location-images">
+    {% if location.image1 %}
+    <div class="mb-3">
+      <img src="{{ location.image1.url }}" class="location-img" alt="Image for {{ location.name }} (1)">
+    </div>
+    {% endif %}
+
+    {% if location.image2 %}
+    <div class="mb-3">
+      <img src="{{ location.image2.url }}" class="location-img" alt="Image for {{ location.name }} (2)">
+    </div>
+    {% endif %}
+  </div>
+
+  <hr>
+
+  <!-- Comments Section -->
+  <div class="comments-section">
+    <h2>Comments</h2>
+    <ul class="comments-list">
+      {% for comment in comments %}
+      <li class="comment">
+        <strong>{{ comment.user.username }}</strong>
+        <span class="comment-date">({{ comment.created_at|date:"Y-m-d H:i" }})</span>
+        <p>{{ comment.content }}</p>
+      </li>
+      {% empty %}
+      <li class="no-comments">No comments yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Add Comment -->
+  {% if user.is_authenticated %}
+  <div class="add-comment">
+    <button id="toggleCommentBtn" type="button" class="btn btn-outline-primary">➕ Add Comment</button>
+    <div id="commentFormContainer" style="display: none;">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit Comment</button>
+      </form>
+    </div>
+  </div>
+  {% else %}
+  <p class="login-prompt">You must be <a href="{% url 'login' %}">logged in</a> to comment.</p>
+  {% endif %}
+</div>
+{% endblock %}

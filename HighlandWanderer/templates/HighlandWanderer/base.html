@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% load top_categories_tags %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}HighlandWanderer Forum{% endblock %}</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'HighlandWanderer/style.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark p-0">
+    <div class="container">
+      <a class="navbar-brand p-2" href="{% url 'home' %}">HighlandWanderer</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarCollapse" aria-controls="navbarCollapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-dark nav-button" href="{% url 'home' %}">Home</a>
+          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark nav-button" href="{% url 'logout' %}">Logout</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark nav-button" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark nav-button" href="{% url 'register' %}">Register</a>
+            </li>
+          {% endif %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark nav-button" href="{% url 'about_us' %}">About</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar for Top Categories -->
+      <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Top 5 Categories</h5>
+              {% show_top_categories %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Main Page Content -->
+  <div class="main-wrapper">
+    <main class="col-md-10 ml-sm-auto px-4">
+      <div class="search-box">
+        {% block body %}{% endblock %}
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      &copy; 2025 HighlandWanderer Forum. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- load jQuery, Popper.js, Bootstrap JS, and custom JS -->
+  <script src="{% static 'HighlandWanderer/jquery.min.js' %}"></script>
+  <script src="{% static 'HighlandWanderer/popper.min.js' %}"></script>
+  <script src="{% static 'HighlandWanderer/bootstrap.min.js' %}"></script>
+  <script src="{% static 'HighlandWanderer/custom.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "HighlandWanderer/base.html" %}
+{% load static %}
+{% block title %}{{ category }} Locations{% endblock %}
+
+{% block body %}
+<div class="category-container">
+    <!-- Category Title -->
+    <h2 class="category-title">{{ category }}</h2>
+
+    <!-- Location Grid -->
+    <div class="location-grid">
+        {% for location in locations %}
+            <div class="location-card">
+                <a href="{% url 'location_detail' location.id %}">
+                    {% if location.image1 %}
+                        <img src="{{ location.image1.url }}" class="location-img" alt="{{ location.name }}">
+                    {% else %}
+                        <img src="{% static 'HighlandWanderer/default-image.jpg' %}" class="location-img" alt="No Image Available">
+                    {% endif %}
+                    <h5 class="location-title">{{ location.name }}</h5>
+                </a>
+                <p class="location-description">{{ location.description|truncatewords:20 }}</p>
+                <div class="rating-container">
+                    <span>🌟 {{ location.beautiful }}</span>
+                    <span>🛏️ {{ location.comfortable }}</span>
+                    <span>🚗 {{ location.traffic }}</span>
+                </div>
+            </div>
+        {% empty %}
+            <p class="no-locations">No locations found in this category.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

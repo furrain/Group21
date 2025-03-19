@@ -1,0 +1,13 @@
+{% if top_categories %}
+<ul class="list-group list-group-flush">
+  {% for category in top_categories %}
+    <li class="list-group-item">
+      <a href="{% url 'category' category.name %}" class="text-primary">
+        {{ category.name }} ({{ category.views }})
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="text-muted">There are no categories present.</p>
+{% endif %}

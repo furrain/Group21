@@ -1,0 +1,10 @@
+{% extends "HighlandWanderer/base.html" %}
+{% block title %}Profile{% endblock %}
+{% block body %}
+    <h1>Edit Profile</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Profile</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "HighlandWanderer/base.html" %}
+{% block title %}Home - HighlandWanderer{% endblock %}
+{% block body %}
+<h2 class="search-title">A gathering place for hiking enthusiasts <br> to find your own scenery</h2>
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 80vh;">
+  <!-- Centered Search Bar -->
+  <div class="w-100" style="max-width: 600px;">
+    <form action="{% url 'search_results' %}" method="get" class="input-group input-group-lg">
+      <input type="text" name="q" class="form-control" placeholder="Search locations...">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

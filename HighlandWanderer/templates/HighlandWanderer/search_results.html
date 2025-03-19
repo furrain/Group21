@@ -1,0 +1,42 @@
+{% extends "HighlandWanderer/base.html" %}
+{% load static %}
+{% block title %}Search Results{% endblock %}
+
+{% block body %}
+<div class="search-results-container">
+    <!-- title -->
+    <h1 class="search-title">Search Results for "{{ query }}"</h1>
+
+    <!-- Sorting options -->
+    <div class="sort-options">
+        <span>Sort by:</span>
+        <a href="?q={{ query }}&order=beautiful" class="btn btn-outline-primary">Beautiful</a>
+        <a href="?q={{ query }}&order=comfortable" class="btn btn-outline-success">Comfortable</a>
+        <a href="?q={{ query }}&order=traffic" class="btn btn-outline-warning">Traffic</a>
+    </div>
+
+    <!-- Search Results -->
+    <div class="location-grid">
+        {% for location in locations %}
+            <div class="location-card">
+                <a href="{% url 'location_detail' location.id %}">
+                    {% if location.image1 %}
+                        <img src="{{ location.image1.url }}" class="location-img" alt="{{ location.name }}">
+                    {% else %}
+                        <img src="{% static 'images/default-image.jpg' %}" class="location-img" alt="No Image Available">
+                    {% endif %}
+                    <h5 class="location-title">{{ location.name }}</h5>
+                </a>
+                <p class="location-description">{{ location.description|truncatewords:20 }}</p>
+                <div class="rating-container">
+                    <span class="rating-item">🌟 {{ location.beautiful }}/5</span>
+                    <span class="rating-item">🛏️ {{ location.comfortable }}/5</span>
+                    <span class="rating-item">🚗 {{ location.traffic }}/5</span>
+                </div>
+            </div>
+        {% empty %}
+            <p class="no-results">No results found.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

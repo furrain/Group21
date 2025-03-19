@@ -1,0 +1,228 @@
+/* ========== Global Styles ========== */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Sidebar Styles ========== */
+.sidebar {
+  height: auto !important;
+  min-height: 100%;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 260px;
+  padding-top: 20px;
+  background-color: #053340 !important; /* Dark blue background */
+  border-right: 1px solid #002171;
+  color: white; /* Make all sidebar text white */
+}
+
+/* Sidebar inner */
+.sidebar-sticky {
+  padding: 10px;
+}
+
+/* Sidebar card */
+.card {
+  background-color: #075763 !important; /* Dark blue for sidebar cards */
+  border: 1px solid #e5e7e8;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Sidebar title */
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Category list */
+.list-group-item {
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+}
+
+/* Category links */
+.list-group-item a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+/* Hover effect does not change color */
+.list-group-item:hover {
+  background-color: transparent;
+}
+
+/* ========== Top Navigation Bar ========== */
+.navbar-custom {
+  background-color: #4285F4;
+  padding: 15px 20px;
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Fixed height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure `navbar` is on top */
+}
+
+/* Navbar left and right layout */
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Button styles */
+.nav-button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Button hover */
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* ========== Main Content Area ========== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Avoid stretching content */
+  min-height: 60vh; /* Prevent content area from being too small */
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  width: 100%;
+  margin-top: 80px; /* Move content down to avoid navbar overlap */
+}
+
+/* ========== Search Box Title (Stylized Text) ========== */
+.search-title {
+  font-size: 3rem; /* Large font size */
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif; /* Artistic font */
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 150px; /* Avoid navbar overlap */
+  margin-bottom: -200px; /* Bring title and search box closer */
+}
+
+/* Import Orbitron font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Search box container */
+.search-container {
+  width: 100%;
+  margin-top: -20px; /* Move search box up */
+  margin-bottom: 10px; /* Bring search box closer to content below */
+}
+
+/* Search box */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+/* Search button */
+.search-container .btn {
+  width: 100%;
+  border-radius: 25px;
+}
+
+/* ========== Categories Section ========== */
+.top-categories {
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-top: 30px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.top-categories h5 {
+  color: #333;
+}
+
+/* ========== Make the Page Fill the Viewport ========== */
+html, body {
+  height: 100%; /* Ensure `html` and `body` fill the viewport */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== Make Main Content Auto-Fill Remaining Space ========== */
+.main-wrapper {
+  flex: 1; /* Ensure content area fills remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 80px; /* Avoid stretching content */
+}
+
+/* ========== Footer Fixed at the Bottom ========== */
+.footer {
+  background-color: #f2f2f2;
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  width: 100%;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  .search-box {
+    max-width: 90%;
+  }
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .main-content {
+    padding: 10px;
+  }
+  .search-container .btn {
+    width: auto;
+  }
+}
+
+/* ========== Location Detail Page ========== */
+.location-detail-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
