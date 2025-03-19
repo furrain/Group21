@@ -1,4 +1,4 @@
-/* ========== Global Styles ========== */
+/* ========== 全局样式 ========== */
 body {
   background-color: #f8f9fa;
   font-family: 'Arial', sans-serif;
@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* ========== Sidebar Styles ========== */
+/* ========== 侧边栏样式 ========== */
 .sidebar {
   height: auto !important;
   min-height: 100%;
@@ -15,32 +15,32 @@ body {
   left: 0;
   width: 260px;
   padding-top: 20px;
-  background-color: #053340 !important; /* Dark blue background */
+  background-color: #053340 !important; /* 深蓝色背景 */
   border-right: 1px solid #002171;
-  color: white; /* Make all sidebar text white */
+  color: white; /* 让所有侧边栏的文字变白 */
 }
 
-/* Sidebar inner */
+/* 侧边栏内部 */
 .sidebar-sticky {
   padding: 10px;
 }
 
-/* Sidebar card */
+/* 侧边栏卡片 */
 .card {
-  background-color: #075763 !important; /* Dark blue for sidebar cards */
+  background-color: #075763 !important; /* 侧边栏的卡片也用深蓝色 */
   border: 1px solid #e5e7e8;
   border-radius: 10px;
   color: white;
 }
 
-/* Sidebar title */
+/* 侧边栏标题 */
 .card-title {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: white;
 }
 
-/* Category list */
+/* 分类列表 */
 .list-group-item {
   border: none;
   padding: 8px 15px;
@@ -49,41 +49,41 @@ body {
   color: white;
 }
 
-/* Category links */
+/* 分类链接 */
 .list-group-item a {
   text-decoration: none;
   font-weight: bold;
   color: #ffffff !important;
 }
 
-/* Hover effect does not change color */
+/* 悬停时不改变颜色 */
 .list-group-item:hover {
   background-color: transparent;
 }
 
-/* ========== Top Navigation Bar ========== */
+/* ========== 顶部导航栏 ========== */
 .navbar-custom {
   background-color: #4285F4;
   padding: 15px 20px;
-  position: fixed; /* Fixed at the top */
+  position: fixed; /* 固定顶部 */
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Fixed height */
+  height: 60px; /* 设定固定高度 */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* Ensure `navbar` is on top */
+  z-index: 1000; /* 确保 `navbar` 在最上层 */
 }
 
-/* Navbar left and right layout */
+/* 导航栏左右布局 */
 .navbar-left, .navbar-right {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Button styles */
+/* 按钮样式 */
 .nav-button {
   font-size: 1rem;
   font-weight: bold;
@@ -94,31 +94,32 @@ body {
   white-space: nowrap;
 }
 
-/* Button hover */
+/* 按钮悬停 */
 .nav-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
-/* ========== Main Content Area ========== */
+/* ========== 主要内容区 ========== */
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Avoid stretching content */
-  min-height: 60vh; /* Prevent content area from being too small */
+  justify-content: flex-start; /* 避免内容被拉伸 */
+  min-height: 60vh; /* 让内容区不至于太小 */
   padding: 20px;
   text-align: center;
   background-color: #f4f4f4;
   width: 100%;
-  margin-top: 80px; /* Move content down to avoid navbar overlap */
+  margin-top: 80px; /* 让内容下移，避免被导航栏遮挡 */
+
 }
 
-/* ========== Search Box Title (Stylized Text) ========== */
+/* ========== 搜索框标题（艺术字样式） ========== */
 .search-title {
-  font-size: 3rem; /* Large font size */
+  font-size: 3rem; /* 字体较大 */
   font-weight: 700;
-  font-family: 'Orbitron', sans-serif; /* Artistic font */
+  font-family: 'Orbitron', sans-serif; /* 使用艺术字体 */
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -126,21 +127,21 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-top: 150px; /* Avoid navbar overlap */
-  margin-bottom: -200px; /* Bring title and search box closer */
+  margin-top: 150px; /* 避免被导航栏遮挡 */
+  margin-bottom: -200px; /* 让标题和搜索框更贴近 */
 }
 
-/* Import Orbitron font */
+/* 确保页面加载 Lobster 字体 */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-/* Search box container */
+/* 搜索框容器 */
 .search-container {
   width: 100%;
-  margin-top: -20px; /* Move search box up */
-  margin-bottom: 10px; /* Bring search box closer to content below */
+  margin-top: -20px; /* 让搜索框向上移动 */
+  margin-bottom: 10px; /* 让搜索框和下面内容更贴近 */
 }
 
-/* Search box */
+/* 搜索框 */
 .search-box {
   width: 100%;
   padding: 10px;
@@ -149,13 +150,13 @@ body {
   font-size: 1rem;
 }
 
-/* Search button */
+/* 搜索按钮 */
 .search-container .btn {
   width: 100%;
   border-radius: 25px;
 }
 
-/* ========== Categories Section ========== */
+/* ========== 分类部分 ========== */
 .top-categories {
   background-color: #ffffff;
   padding: 20px 0;
@@ -167,25 +168,25 @@ body {
   color: #333;
 }
 
-/* ========== Make the Page Fill the Viewport ========== */
+/* ========== 让页面整体撑满视口 ========== */
 html, body {
-  height: 100%; /* Ensure `html` and `body` fill the viewport */
+  height: 100%; /* 让整个页面的 `html` 和 `body` 充满视口 */
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
-/* ========== Make Main Content Auto-Fill Remaining Space ========== */
+/* ========== 让主内容自动填充剩余空间 ========== */
 .main-wrapper {
-  flex: 1; /* Ensure content area fills remaining space */
+  flex: 1; /* 让内容区域撑满剩余空间，保证页脚始终在底部 */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 80px; /* Avoid stretching content */
+  padding-top: 80px;/* 避免内容被拉伸 */
 }
 
-/* ========== Footer Fixed at the Bottom ========== */
+/* ========== 页脚固定在底部 ========== */
 .footer {
   background-color: #f2f2f2;
   color: #666;
@@ -193,10 +194,10 @@ html, body {
   padding: 10px 0;
   font-size: 0.8rem;
   width: 100%;
-  margin-top: auto; /* Push footer to the bottom */
+  margin-top: auto; /* 让页脚自动推到页面底部 */
 }
 
-/* ========== Responsive Adaptation ========== */
+/* ========== 响应式适配 ========== */
 @media (max-width: 768px) {
   .nav-button {
     font-size: 0.9rem;
@@ -217,7 +218,128 @@ html, body {
   }
 }
 
-/* ========== Location Detail Page ========== */
+/* ========== 统一 Location 详情页图片尺寸 ========== */
+.location-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* 图片之间的间距 */
+  margin-top: 20px;
+}
+
+.location-img {
+  width: 300px; /* 设定统一宽度 */
+  height: 200px; /* 设定统一高度 */
+  object-fit: cover; /* 保持图片比例，不变形 */
+  border-radius: 10px; /* 圆角，增加美观 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 增加阴影，提升视觉效果 */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 悬停时增加放大效果 */
+.location-img:hover {
+  transform: scale(1.05);
+}
+
+/* category部分 */
+/* ========== 分类页面整体样式 ========== */
+.category-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 分类标题 */
+.category-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ========== 位置卡片布局 ========== */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自适应列布局 */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 位置卡片 */
+.location-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.location-card:hover {
+  transform: translateY(-5px); /* 悬停时微微上升 */
+}
+
+/* 位置图片 */
+.location-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 位置标题 */
+.location-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* 位置描述 */
+.location-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* 评分信息 */
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  color: #ff9800;
+}
+
+/* 如果没有位置 */
+.no-locations {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 768px) {
+  .category-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+
+
+
+/* ========== 位置详情页面整体布局 ========== */
 .location-detail-container {
   max-width: 900px;
   margin: 50px auto;
@@ -226,3 +348,513 @@ html, body {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* 标题样式 */
+.location-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========== 评分部分 ========== */
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.rating-item {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* ========== 地址部分 ========== */
+.location-address {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location-address a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.location-address a:hover {
+  text-decoration: underline;
+}
+
+/* ========== 位置描述 ========== */
+.location-description {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* ========== 评论部分 ========== */
+.comments-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.comment-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.no-comments {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+/* ========== 添加评论 ========== */
+.add-comment {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.add-comment button {
+  margin-top: 10px;
+}
+
+/* 登录提示 */
+.login-prompt {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.login-prompt a {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* ========== 搜索结果页面整体样式 ========== */
+.search-results-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 搜索标题 */
+.search-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ========== 排序选项 ========== */
+.sort-options {
+  margin-bottom: 20px;
+}
+
+.sort-options span {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sort-options .btn {
+  margin: 5px;
+}
+
+/* ========== 位置卡片布局 ========== */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自适应列布局 */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 位置卡片 */
+.location-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.location-card:hover {
+  transform: translateY(-5px); /* 悬停时微微上升 */
+}
+
+/* 位置图片 */
+.location-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 位置标题 */
+.location-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* 位置描述 */
+.location-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* 评分信息 */
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  color: #ff9800;
+}
+
+.rating-item {
+  font-weight: bold;
+}
+
+/* ========== 无搜索结果样式 ========== */
+.no-results {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 768px) {
+  .search-results-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+
+
+
+/* ========== 注册页面整体布局 ========== */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* ========== 注册表单卡片 ========== */
+.register-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ========== 标题 ========== */
+.register-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ========== 表单输入框 ========== */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* ========== 提交按钮 ========== */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* ========== 已有账户链接 ========== */
+.login-redirect {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-redirect a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+/* ========== 登录页面整体布局 ========== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* ========== 登录表单卡片 ========== */
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ========== 标题 ========== */
+.login-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ========== 表单输入框 ========== */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* ========== 提交按钮 ========== */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* ========== 注册跳转 ========== */
+.register-redirect {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.register-redirect a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 20px;
+  }
+}
+
+
+
+
+/* ========== About Us 页面整体布局 ========== */
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ========== About Us 主要卡片 ========== */
+.about-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ========== 标题样式 ========== */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.about-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.about-description, .about-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========== 团队展示 ========== */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
