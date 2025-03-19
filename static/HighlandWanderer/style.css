@@ -1,0 +1,860 @@
+/* ========== Global styles ========== */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Sidebar Style ========== */
+.sidebar {
+  height: auto !important;
+  min-height: 100%;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 260px;
+  padding-top: 20px;
+  background-color: #053340 !important;
+  border-right: 1px solid #002171;
+  color: white;
+}
+
+/* Inside the sidebar */
+.sidebar-sticky {
+  padding: 10px;
+}
+
+/* Sidebar Cards */
+.card {
+  background-color: #075763 !important;
+  border: 1px solid #e5e7e8;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Sidebar Title */
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Category List */
+.list-group-item {
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+}
+
+/* Category Links */
+.list-group-item a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+/* Do not change color on hover */
+.list-group-item:hover {
+  background-color: transparent;
+}
+
+/* ========== Top Navigation Bar ========== */
+.navbar-custom {
+  background-color: #4285F4;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Navigation bar left and right layout */
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Button Style */
+.nav-button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Button Hover */
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* ========== Main content area ========== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 60vh;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  width: 100%;
+  margin-top: 80px;
+
+}
+
+/* ========== Search box title (WordArt style) ========== */
+.search-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: -200px;
+}
+
+/* Make sure the page loads the Lobster font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Search box container */
+.search-container {
+  width: 100%;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+/* Search Box */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+/* Search Button */
+.search-container .btn {
+  width: 100%;
+  border-radius: 25px;
+}
+
+/* ========== Classification section ========== */
+.top-categories {
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-top: 30px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.top-categories h5 {
+  color: #333;
+}
+
+/* ========== Make the entire page fill the viewport ========== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== Let the main content automatically fill the remaining space ========== */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 80px;
+}
+
+/* ========== Footer fixed at the bottom ========== */
+.footer {
+  background-color: #f2f2f2;
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  .search-box {
+    max-width: 90%;
+  }
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .main-content {
+    padding: 10px;
+  }
+  .search-container .btn {
+    width: auto;
+  }
+}
+
+/* ========== Unify the image size of Location details page ========== */
+.location-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* 图片之间的间距 */
+  margin-top: 20px;
+}
+
+.location-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Increase zoom effect on hover */
+.location-img:hover {
+  transform: scale(1.05);
+}
+
+/* category */
+/* ========== Category page overall style ========== */
+.category-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Category Title */
+.category-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ========== Location Card Layout ========== */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自适应列布局 */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Location Card */
+.location-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Location Picture */
+.location-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Location Title */
+.location-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Position Description */
+.location-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Rating Information */
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  color: #ff9800;
+}
+
+/* If there is no location */
+.no-locations {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .category-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+
+
+
+/* ========== Location details page overall layout ========== */
+.location-detail-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+.location-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========== Rating section ========== */
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.rating-item {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* ========== Address part ========== */
+.location-address {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location-address a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.location-address a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Position Description ========== */
+.location-description {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* ========== Comments Section ========== */
+.comments-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.comment-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.no-comments {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+/* ========== Add Comment ========== */
+.add-comment {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.add-comment button {
+  margin-top: 10px;
+}
+
+/* Login Tips */
+.login-prompt {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.login-prompt a {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* ========== Overall style of search results page ========== */
+.search-results-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Search Title */
+.search-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ========== Sorting options ========== */
+.sort-options {
+  margin-bottom: 20px;
+}
+
+.sort-options span {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sort-options .btn {
+  margin: 5px;
+}
+
+/* ========== Location Card Layout ========== */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自适应列布局 */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Location Card */
+.location-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Location Picture */
+.location-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Location Title */
+.location-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Position Description */
+.location-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Rating Information */
+.rating-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  color: #ff9800;
+}
+
+.rating-item {
+  font-weight: bold;
+}
+
+/* ========== No search result style ========== */
+.no-results {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .search-results-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+
+
+
+/* ========== Registration page overall layout ========== */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* ========== Registration form card ========== */
+.register-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ========== title ========== */
+.register-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ========== Form input box ========== */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* ========== Submit Button ========== */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Already have an account linked ========== */
+.login-redirect {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-redirect a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+/* ========== Login page overall layout ========== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* ========== Login Form Card ========== */
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ========== title ========== */
+.login-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ========== Form input box ========== */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* ========== Submit Button ========== */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Register Jump ========== */
+.register-redirect {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.register-redirect a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 20px;
+  }
+}
+
+
+
+
+/* ========== About  ========== */
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ========== About Card ========== */
+.about-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ========== title ========== */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.about-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.about-description, .about-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========== team ========== */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ========== Responsive Adaptation ========== */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
