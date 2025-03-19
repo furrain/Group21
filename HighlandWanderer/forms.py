@@ -54,7 +54,7 @@ class CategoryForm(forms.ModelForm):
         fields = ['name']
 
 
-# Form for adding a new Location (admin functionality).
+# Form for adding a new Location
 class LocationForm(forms.ModelForm):
     class Meta:
         model = Location

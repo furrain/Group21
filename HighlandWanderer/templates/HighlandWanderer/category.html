@@ -6,7 +6,11 @@
 <div class="category-container">
     <!-- Category Title -->
     <h2 class="category-title">{{ category }}</h2>
-
+    {% if user.is_authenticated %}
+    <div class="add-location-container">
+        <a href="{% url 'add_location' %}" class="btn btn-primary">➕ Add Location</a>
+    </div>
+    {% endif %}
     <!-- Location Grid -->
     <div class="location-grid">
         {% for location in locations %}

@@ -96,17 +96,19 @@ def add_category(request):
         form = CategoryForm()
     return render(request, 'HighlandWanderer/add_category.html', {'form': form})
 
-# New admin view: Add Location
-@staff_member_required
+# Add Location
+@login_required
 def add_location(request):
     if request.method == 'POST':
-        form = LocationForm(request.POST)
+        form = LocationForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            location = form.save(commit=False)
+            location.save()
             messages.success(request, 'Location added successfully.')
-            return redirect('home')
+            return redirect('category', category_name=location.category.name)
     else:
         form = LocationForm()
+
     return render(request, 'HighlandWanderer/add_location.html', {'form': form})
 
 
